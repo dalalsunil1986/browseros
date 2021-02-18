@@ -3,8 +3,8 @@ Terminal-based Linux-like operating system in your browser.
 ***
 ## Usage
 ```bash
-git clone https://github.com/hilight3r/browser-os
-cd browser-os/
+git clone https://github.com/hilight3r/browseros
+cd browseros/
 npm i -D
 npm run build
 cd dist/

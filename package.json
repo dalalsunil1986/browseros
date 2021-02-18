@@ -18,7 +18,7 @@
   "license": "AGPL-3.0-only",
   "repository": {
     "type": "github",
-    "url": "https://github.com/hilight3r/browser-os"
+    "url": "https://github.com/hilight3r/browseros"
   },
   "browserslist": [
     "> 0.25%",
