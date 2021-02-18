@@ -2,7 +2,7 @@
   "name": "browseros",
   "version": "0.0.1",
   "description": "Browser operating system",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "dev": "cross-env DEVMODE=1 webpack",
     "build": "cross-env DEVMODE=0 webpack",
