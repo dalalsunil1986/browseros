@@ -1,0 +1,49 @@
+{
+  "name": "browseros",
+  "version": "0.0.1",
+  "description": "Browser operating system",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env DEVMODE=1 webpack",
+    "build": "cross-env DEVMODE=0 webpack",
+    "watch": "cross-env DEVMODE=1 webpack --watch",
+    "start": "cross-env DEVMODE=1 webpack serve",
+    "stats": "webpack --profile --json > stats.json && webpack-bundle-analyzer stats.json"
+  },
+  "author": "Vladislav Savitskiy aka HIlight3R <hilight3r7@gmail.com> (https://hilight3r.github.io)",
+  "license": "AGPL-3.0-only",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/hilight3r/browser-os"
+  },
+  "browserslist": "> 0.25%, not dead",
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "jquery": "^3.5.1",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.13",
+    "@babel/plugin-proposal-class-properties": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^7.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.0.1",
+    "css-minimizer-webpack-plugin": "^1.2.0",
+    "cssnano-preset-advanced": "^4.0.7",
+    "eslint": "^7.19.0",
+    "eslint-loader": "^4.0.2",
+    "file-loader": "^6.2.0",
+    "html-minimizer-webpack-plugin": "^2.1.0",
+    "html-webpack-plugin": "^5.0.0",
+    "mini-css-extract-plugin": "^1.3.5",
+    "terser-webpack-plugin": "^5.1.1",
+    "webpack": "^5.21.1",
+    "webpack-bundle-analyzer": "^4.4.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}

@@ -1,0 +1,127 @@
+.fg-0 {
+    color: #000;
+}
+
+body, .bg-0 {
+    background-color: #000;
+}
+
+.fg-1 {
+    color: #A00;
+}
+
+.bg-1 {
+    background-color: #A00;
+}
+
+.fg-2 {
+    color: #0A0;
+}
+
+.bg-2 {
+    background-color: #0A0;
+}
+
+.fg-3 {
+    color: #A50;
+}
+
+.bg-3 {
+    background-color: #A50;
+}
+
+.fg-4 {
+    color: #A50;
+}
+
+.bg-4 {
+    background-color: #00A;
+}
+
+.fg-5 {
+    color: #A0A;
+}
+
+.bg-5 {
+    background-color: #A0A;
+}
+
+.fg-6 {
+    color: #0AA;
+}
+
+.bg-6 {
+    background-color: #0AA;
+}
+
+.fg-7 {
+    color: #AAA;
+}
+
+.bg-7 {
+    background-color: #AAA;
+}
+
+.fg-8 {
+    color: #555;
+}
+
+.bg-8 {
+    background-color: #555;
+}
+
+.fg-9 {
+    color: #F55;
+}
+
+.bg-9 {
+    background-color: #F55;
+}
+
+.fg-a {
+    color: #5F5;
+}
+
+.bg-a {
+    background-color: #5F5;
+}
+
+.fg-b {
+    color: #FF5;
+}
+
+.bg-b {
+    background-color: #FF5;
+}
+
+.fg-c {
+    color: #55F;
+}
+
+.bg-c {
+    background-color: #55F;
+}
+
+.fg-d {
+    color: #F5F;
+}
+
+.bg-d {
+    background-color: #F5F;
+}
+
+.fg-e {
+    color: #5FF;
+}
+
+.bg-e {
+    background-color: #5FF;
+}
+
+body, .fg-f {
+    color: #FFF;
+}
+
+.bg-f {
+    background-color: #FFF;
+}
