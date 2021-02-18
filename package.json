@@ -10,16 +10,21 @@
     "start": "cross-env DEVMODE=1 webpack serve",
     "stats": "webpack --profile --json > stats.json && webpack-bundle-analyzer stats.json"
   },
-  "author": "Vladislav Savitskiy aka HIlight3R <hilight3r7@gmail.com> (https://hilight3r.github.io)",
+  "author": {
+    "name": "Vladislav Savitskiy aka HIlight3R",
+    "email": "hilight3r7@gmail.com",
+    "url": "https://hilight3r.github.io"
+  },
   "license": "AGPL-3.0-only",
   "repository": {
     "type": "github",
     "url": "https://github.com/hilight3r/browser-os"
   },
-  "browserslist": "> 0.25%, not dead",
+  "browserslist": [
+    "> 0.25%",
+    "not dead"
+  ],
   "dependencies": {
-    "@babel/polyfill": "^7.12.1",
-    "jquery": "^3.5.1",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {

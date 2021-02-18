@@ -18,12 +18,9 @@ const TerserPlugin = require("terser-webpack-plugin")
 // Additions
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const WebpackBundleAnalyzer = require('webpack-bundle-analyzer')
 
 
 // Functions
-const filename = ext => isDev ? `[name].bundle.${ext}` : `[name].[fullhash].${ext}`
-
 const stylesLoader = (loader) => {
     let config = [
         {
@@ -81,13 +78,12 @@ module.exports = {
         main: './index.js',
     },
     output: {
-        filename: filename('js'),
+        filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
     resolve: {
         extensions: ['.js'],
         alias: {
-            '@models': path.resolve(__dirname, 'src/models'),
             '@': path.resolve(__dirname, 'src')
         }
     },
@@ -157,7 +153,7 @@ module.exports = {
             ]
         }),
         new MiniCssExtractPlugin({
-            filename: filename('css'),
+            filename: '[name].bundle.css',
             ignoreOrder: false
         })
     ],
@@ -178,10 +174,4 @@ module.exports = {
             }
         ]
     }
-}
-
-if (isProd) {
-    module.exports.plugins.push(
-        new WebpackBundleAnalyzer.BundleAnalyzerPlugin()
-    )
 }
