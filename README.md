@@ -5,8 +5,6 @@ Terminal-based Linux-like operating system in your browser.
 ![GitHub](https://img.shields.io/github/license/hilight3r/browseros?style=for-the-badge)
 ![GitHub all releases](https://img.shields.io/github/downloads/hilight3r/browseros/total?style=for-the-badge)
 ![GitHub repo size](https://img.shields.io/github/repo-size/hilight3r/browseros?style=for-the-badge)
-
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/hilight3r/browseros?style=for-the-badge)
 ![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/hilight3r/browseros?style=for-the-badge)
 
 ***
