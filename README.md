@@ -1,7 +1,10 @@
 # Browser OS (v0.0.1)
+
 Terminal-based Linux-like operating system in your browser.
 ***
+
 ## Usage
+
 ```bash
 git clone https://github.com/hilight3r/browseros
 cd browseros/
@@ -12,4 +15,5 @@ cd dist/
 ```
 
 [comment]: <> (TODO: Add link below)
+
 [comment]: <> (Or download last build from here.)
