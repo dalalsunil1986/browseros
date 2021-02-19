@@ -1,0 +1,1 @@
+export const sanitizeText = tag => tag.replaceAll('<', '&lt;').replaceAll('>', '&gt;').trim()
