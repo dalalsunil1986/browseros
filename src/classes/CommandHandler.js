@@ -21,7 +21,7 @@ export class CommandHandler {
                 out = command.run(value)
         })
 
-        if (out)
+        if (typeof out !== 'undefined')
             return out
         else
             return `Command "${first}" not found!`
