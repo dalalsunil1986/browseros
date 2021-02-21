@@ -1,6 +1,6 @@
 {
   "name": "browseros",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Terminal-based Linux-like operating system in your browser",
   "main": "app.js",
   "keywords": [
