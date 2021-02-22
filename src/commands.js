@@ -17,13 +17,13 @@ const commands = {
             '',
             'That is all for now :)`'].join('\n')
     },
-    uptime: () => {
+    uptime: () => { // Display system uptime
         const delta = Date.now() - startTime
         const days = Math.floor(delta / 1000 / 60 / 60 / 24)
         const hours = Math.floor(delta / 1000 / 60 / 60 - days * 24)
         const minutes = Math.floor(delta / 1000 / 60 - hours * 60 - days * 60 * 24)
         const seconds = Math.floor(delta / 1000 - minutes * 60 - hours * 60 * 60 - days * 60 * 60 * 24)
-        const milliseconds = Math.floor(delta - seconds * 1000  - minutes * 1000 * 60 - hours * 1000 * 60 * 60 - days * 1000 * 60 * 60 * 24)
+        const milliseconds = Math.floor(delta - seconds * 1000 - minutes * 1000 * 60 - hours * 1000 * 60 * 60 - days * 1000 * 60 * 60 * 24)
         return `Uptime: ${days}d ${hours}h ${minutes}m ${seconds}s ${milliseconds}ms`
     }
 }

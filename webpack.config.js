@@ -119,7 +119,6 @@ module.exports = {
                     },
                     mangle: {
                         eval: true,
-                        builtins: true
                     },
                     ecma: 2018,
                     toplevel: true,
