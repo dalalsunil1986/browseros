@@ -1,4 +1,4 @@
-# Browser OS (v0.0.1)
+# Browser OS
 
 Terminal-based Linux-like operating system in your browser.
 

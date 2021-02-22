@@ -1,6 +1,32 @@
 @import "font.css";
 @import "colors.css";
 
+
+.console {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+*::selection {
+    color: #000;
+    background-color: #FFF;
+}
+
+.input-form {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.prompt {
+    display: inline-block;
+    width: max-content;
+    margin-right: 1ch;
+    vertical-align: middle;
+}
+
 .command {
     color: #FFF;
     background-color: #000;
@@ -9,22 +35,6 @@
     width: max-content;
     outline: none;
     caret-shape: block;
-}
-
-.console {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 0;
-    width: max-content;
-    min-width: 1rem;
-}
-
-.console::selection {
-    background-color: #FFF;
-    color: #000;
-}
-
-.prompt {
-    display: inline-block;
-    width: max-content;
+    flex-grow: 1;
+    vertical-align: middle;
 }

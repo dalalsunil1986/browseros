@@ -1,6 +1,6 @@
 {
   "name": "browseros",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Terminal-based Linux-like operating system in your browser",
   "main": "app.js",
   "keywords": [
@@ -28,7 +28,7 @@
     "watch": "cross-env DEVMODE=1 webpack --watch",
     "start": "cross-env DEVMODE=1 webpack serve",
     "stats": "webpack --profile --json > stats.json && webpack-bundle-analyzer stats.json",
-    "deploy": "npm run build && gh-pages -d dist -g $(git log --format=%B -n 1 $(git rev-parse origin/master))"
+    "deploy": "npm run build && gh-pages -d dist -g \"$(git log --format=%B -n 1 $(git rev-parse origin/master))\""
   },
   "author": {
     "name": "Vladislav Savitskiy aka HIlight3R",

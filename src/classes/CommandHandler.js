@@ -24,6 +24,6 @@ export class CommandHandler {
         if (typeof out !== 'undefined')
             return out
         else
-            return `Command "${first}" not found!`
+            return `Command "${first}" not found! Use "help" for command reference.`
     }
 }
