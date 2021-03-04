@@ -18,57 +18,7 @@ const TerserPlugin = require("terser-webpack-plugin")
 // Additions
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-
-
-// Functions
-const stylesLoader = (loader) => {
-    let config = [
-        {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-                publicPath: './',
-            },
-        },
-        'css-loader'
-    ]
-
-    if (loader) {
-        config.push(loader)
-    }
-
-    return config
-}
-
-const babelOptions = preset => {
-    const opts = {
-        presets: [
-            '@babel/preset-env'
-        ],
-        plugins: [
-            '@babel/plugin-proposal-class-properties'
-        ]
-    }
-
-    if (preset) {
-        opts.presets.push(preset)
-    }
-
-    return opts
-}
-
-
-const jsLoaders = preset => {
-    const loaders = [{
-        loader: 'babel-loader',
-        options: babelOptions(preset)
-    }]
-
-    if (isDev) {
-        loaders.push('eslint-loader')
-    }
-
-    return loaders
-}
+const ESLintPlugin = require('eslint-webpack-plugin')
 
 // Main config
 module.exports = {
@@ -82,7 +32,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     resolve: {
-        extensions: ['.js'],
+        extensions: ['.js', '.ts'],
         alias: {
             '@': path.resolve(__dirname, 'src')
         }
@@ -154,6 +104,9 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: '[name].bundle.css',
             ignoreOrder: false
+        }),
+        isProd ? undefined : new ESLintPlugin({
+            extensions: ['ts']
         })
     ],
     module: {
@@ -161,11 +114,43 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                use: jsLoaders()
+                use: [{
+                    loader: 'babel-loader',
+                    options: {
+                        presets: [
+                            '@babel/preset-env'
+                        ],
+                        plugins: [
+                            '@babel/plugin-proposal-class-properties'
+                        ]
+                    }
+                }]
+            },
+            {
+                test: /\.ts$/,
+                exclude: /node_modules/,
+                use: [{
+                    loader: 'babel-loader',
+                    options: {
+                        presets: [
+                            '@babel/preset-env'
+                        ],
+                        plugins: [
+                            '@babel/plugin-proposal-class-properties'
+                        ]
+                    }
+                }, 'ts-loader']
             },
             {
                 test: /\.css$/,
-                use: stylesLoader()
+                use: [{
+                    loader: MiniCssExtractPlugin.loader,
+                    options: {
+                        publicPath: './',
+                    },
+                },
+                    'css-loader'
+                ]
             },
             {
                 test: /\.png$/,

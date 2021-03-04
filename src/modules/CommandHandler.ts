@@ -1,21 +1,20 @@
 import {Command} from './Command'
 
 export class CommandHandler {
-    constructor(commands) {
+    public commands: Command[]
+
+    constructor(commands: Command[]) {
         this.commands = commands
     }
 
-    add(command) {
-        if (typeof command === 'object' && command instanceof Command) // If command is prototype of Command class
-            this.commands.push(command)
-        else
-            throw new Error('Incorrect type of command')
+    add(command: Command): void {// If command is prototype of Command class
+        this.commands.push(command)
     }
 
-    run(value) {
+    run(value: string): string {
         const first = value.split(' ', 1)[0]
 
-        let out
+        let out: string | undefined
         this.commands.forEach(command => {
             if (command.startsWith === first)
                 out = command.run(value)

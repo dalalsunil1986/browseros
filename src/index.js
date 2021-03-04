@@ -1,5 +1,5 @@
 import {element, inputPrompt, terminal, userInput} from "./elements"
-import {username, hostname} from './settings'
+import {hostname, username} from './settings'
 
 import 'normalize.css'
 import './styles/main.css'

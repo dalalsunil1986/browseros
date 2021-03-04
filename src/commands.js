@@ -1,6 +1,6 @@
 import {terminal} from './elements'
-import {Command} from './classes/Command'
-import {CommandHandler} from './classes/CommandHandler'
+import {Command} from './modules/Command'
+import {CommandHandler} from './modules/CommandHandler'
 import {startTime} from './settings'
 
 const commands = {
